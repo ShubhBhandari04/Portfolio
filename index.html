@@ -22,11 +22,11 @@
   --accent3: #F5A442;
   --card-bg: #161616;
 }
- 
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
 html { scroll-behavior: smooth; }
- 
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -35,7 +35,7 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
 }
- 
+
 /* ─── CURSOR ─── */
 .cursor {
   width: 8px; height: 8px;
@@ -57,7 +57,7 @@ body {
   opacity: 0.4;
   transition: transform 0.25s ease, width 0.2s, height 0.2s, opacity 0.2s;
 }
- 
+
 /* ─── NAV ─── */
 nav {
   position: fixed; top: 0; left: 0; right: 0;
@@ -104,7 +104,7 @@ nav.scrolled {
   transition: opacity 0.2s;
 }
 .nav-cta:hover { opacity: 0.85; }
- 
+
 /* ─── HERO ─── */
 #hero {
   min-height: 100vh;
@@ -146,10 +146,11 @@ nav.scrolled {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
   font-size: clamp(3rem, 8vw, 7rem);
-  line-height: 0.95;
+  line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--text);
   max-width: 900px;
+  padding-bottom: 0.1em;
   opacity: 0; transform: translateY(30px);
   animation: fadeUp 0.8s 0.35s forwards;
 }
@@ -242,7 +243,7 @@ nav.scrolled {
   width: 1px; height: 48px;
   background: linear-gradient(to bottom, var(--hint), transparent);
 }
- 
+
 /* ─── SECTIONS COMMON ─── */
 section { padding: 7rem 3rem; }
 .section-eyebrow {
@@ -273,7 +274,7 @@ section { padding: 7rem 3rem; }
   max-width: 500px;
   font-weight: 300;
 }
- 
+
 /* ─── TICKER ─── */
 .ticker-wrap {
   background: var(--accent);
@@ -302,7 +303,7 @@ section { padding: 7rem 3rem; }
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
- 
+
 /* ─── ABOUT ─── */
 #about { background: var(--bg2); }
 .about-grid {
@@ -367,7 +368,7 @@ section { padding: 7rem 3rem; }
   color: var(--muted);
   border-radius: 2px;
 }
- 
+
 /* ─── EXPERIENCE ─── */
 #experience { background: var(--bg); }
 .experience-wrap { max-width: 1100px; margin: 0 auto; }
@@ -453,7 +454,7 @@ section { padding: 7rem 3rem; }
   text-transform: uppercase;
   margin-top: 2px;
 }
- 
+
 /* ─── SKILLS ─── */
 #skills { background: var(--bg2); }
 .skills-wrap { max-width: 1100px; margin: 0 auto; }
@@ -497,7 +498,7 @@ section { padding: 7rem 3rem; }
   height: 100%; border-radius: 1px;
   background: var(--accent);
 }
- 
+
 /* ─── CREATIVE WORK ─── */
 #work { background: var(--bg); }
 .work-wrap { max-width: 1100px; margin: 0 auto; }
@@ -577,7 +578,7 @@ section { padding: 7rem 3rem; }
   color: var(--muted);
   font-weight: 300;
 }
- 
+
 /* ─── CERTIFICATIONS ─── */
 #certifications { background: var(--bg2); }
 .certs-wrap { max-width: 1100px; margin: 0 auto; }
@@ -619,7 +620,7 @@ section { padding: 7rem 3rem; }
   font-family: 'Syne', sans-serif;
   font-weight: 700;
 }
- 
+
 /* ─── EDUCATION ─── */
 #education { background: var(--bg); }
 .edu-wrap { max-width: 1100px; margin: 0 auto; }
@@ -662,7 +663,7 @@ section { padding: 7rem 3rem; }
   font-weight: 300;
   line-height: 1.7;
 }
- 
+
 /* ─── CONTACT ─── */
 #contact {
   background: var(--accent);
@@ -731,7 +732,7 @@ section { padding: 7rem 3rem; }
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }
 }
- 
+
 /* ─── FOOTER ─── */
 footer {
   background: var(--bg);
@@ -754,19 +755,19 @@ footer {
   transition: color 0.2s;
 }
 .footer-links a:hover { color: var(--accent); }
- 
+
 /* ─── SCROLL REVEAL ─── */
 .reveal {
   opacity: 0; transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
- 
+
 /* ─── ANIMATIONS ─── */
 @keyframes fadeUp {
   to { opacity: 1; transform: translateY(0); }
 }
- 
+
 /* ─── MOBILE NAV ─── */
 .nav-hamburger {
   display: none;
@@ -778,46 +779,46 @@ footer {
   background: var(--text);
   transition: transform 0.3s;
 }
- 
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   nav { padding: 1.2rem 1.5rem; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
   .nav-cta { font-size: 0.75rem; padding: 0.45rem 1rem; }
- 
+
   #hero { padding: 7rem 1.5rem 4rem; }
   section { padding: 5rem 1.5rem; }
- 
+
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
   .tools-grid { grid-template-columns: 1fr; }
- 
+
   .exp-card {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
   .exp-right { text-align: left; }
   .exp-metrics { flex-direction: row; align-items: flex-start; flex-wrap: wrap; }
- 
+
   .skills-grid { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: 1fr; }
   .certs-grid { grid-template-columns: 1fr; }
   .edu-grid { grid-template-columns: 1fr; }
- 
+
   .contact-wrap { flex-direction: column; align-items: flex-start; }
   footer { flex-direction: column; text-align: center; }
   .cursor, .cursor-ring { display: none; }
- 
+
   .hero-scroll-hint { display: none; }
   .hero-stats { gap: 2rem; }
 }
 </style>
 </head>
 <body>
- 
+
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursor-ring"></div>
- 
+
 <!-- NAV -->
 <nav id="navbar">
   <a href="#" class="nav-logo">SB<span>.</span></a>
@@ -833,7 +834,7 @@ footer {
     <span></span><span></span><span></span>
   </div>
 </nav>
- 
+
 <!-- HERO -->
 <section id="hero">
   <div class="hero-grid-overlay"></div>
@@ -874,7 +875,7 @@ footer {
     Scroll
   </div>
 </section>
- 
+
 <!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker-track">
@@ -905,7 +906,7 @@ footer {
     <span class="ticker-item">CRM</span><span class="ticker-dot">✦</span>
   </div>
 </div>
- 
+
 <!-- ABOUT -->
 <section id="about">
   <div class="about-grid">
@@ -970,7 +971,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="experience-wrap">
@@ -982,7 +983,7 @@ footer {
       <p class="section-sub">Marketing roles across hospitality, B2B SaaS, and consumer brands in India and the UK.</p>
     </div>
     <div class="exp-cards">
- 
+
       <div class="exp-card reveal">
         <div class="exp-left">
           <div class="exp-company">Triumph Lucknow</div>
@@ -1015,7 +1016,7 @@ footer {
           </div>
         </div>
       </div>
- 
+
       <div class="exp-card reveal">
         <div class="exp-left">
           <div class="exp-company">Zoftware</div>
@@ -1044,7 +1045,7 @@ footer {
           </div>
         </div>
       </div>
- 
+
       <div class="exp-card reveal">
         <div class="exp-left">
           <div class="exp-company">BIM's</div>
@@ -1072,7 +1073,7 @@ footer {
           </div>
         </div>
       </div>
- 
+
       <div class="exp-card reveal">
         <div class="exp-left">
           <div class="exp-company">Staymate</div>
@@ -1096,11 +1097,11 @@ footer {
           </div>
         </div>
       </div>
- 
+
     </div>
   </div>
 </section>
- 
+
 <!-- SKILLS -->
 <section id="skills">
   <div class="skills-wrap">
@@ -1142,7 +1143,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- CREATIVE WORK -->
 <section id="work">
   <div class="work-wrap">
@@ -1184,7 +1185,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- CERTIFICATIONS -->
 <section id="certifications">
   <div class="certs-wrap">
@@ -1236,7 +1237,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- EDUCATION -->
 <section id="education">
   <div class="edu-wrap">
@@ -1264,7 +1265,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-noise"></div>
@@ -1300,7 +1301,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-copy">© 2025 Shubh Bhandari. Lucknow, India.</div>
@@ -1311,7 +1312,7 @@ footer {
     <a href="mailto:shubhbhandari04@gmail.com">Email</a>
   </div>
 </footer>
- 
+
 <script>
 // Custom cursor
 const cursor = document.getElementById('cursor');
@@ -1344,13 +1345,13 @@ document.querySelectorAll('a, button').forEach(el => {
     ring.style.marginTop = '0';
   });
 });
- 
+
 // Nav scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
 });
- 
+
 // Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(entries => {
@@ -1362,7 +1363,7 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach(el => observer.observe(el));
- 
+
 // Hamburger (mobile)
 const hamburger = document.getElementById('hamburger');
 hamburger.addEventListener('click', () => {
@@ -1381,7 +1382,7 @@ hamburger.addEventListener('click', () => {
   links.style.zIndex = '99';
   links.style.gap = '1.5rem';
 });
- 
+
 // Close mobile menu on link click
 document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => {
